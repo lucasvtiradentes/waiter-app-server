@@ -1,0 +1,39 @@
+{
+  "name": "waiter_backend",
+  "version": "1.0.0",
+  "description": "This is the api used in the waiter full stack app.",
+  "license": "MIT",
+  "homepage": "https://github.com/lucasvtiradentes/waiter_backend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasvtiradentes/waiter_backend.git"
+  },
+  "author": {
+    "name": "Lucas Vieira",
+    "email": "lucasvtiradentes@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasvtiradentes/waiter_backend/issues"
+  },
+  "main": "build/src/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node waiter_backend/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "multer": "1.4.5-lts.1",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.11.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.3"
+  }
+}

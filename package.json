@@ -1,0 +1,29 @@
+{
+  "name": "waiter_fullstack_monorepo",
+  "version": "1.0.0",
+  "description": "This is the ser part of a fullstack waiter software solution to help organizing orders for restaurants.",
+  "license": "MIT",
+  "homepage": "https://github.com/lucasvtiradentes/waiter_fullstack_monorepo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasvtiradentes/waiter_fullstack_monorepo.git"
+  },
+  "author": {
+    "name": "Lucas Vieira",
+    "email": "lucasvtiradentes@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasvtiradentes/waiter_fullstack_monorepo/issues"
+  },
+  "scripts": {
+    "prod_start": "cd ./build && npm run start",
+    "prod_build": "bash \"./scripts/prod_build.sh\"",
+    "start": "npm run prod_start",
+    "build": "npm run prod_build",
+    "dev": "pnpm run --parallel -r dev",
+    "dev_build": "pnpm run --parallel -r build",
+    "dev_docker_build": "docker build -t waiterserver .",
+    "dev_docker_start": "docker run --name waiter_dev --env-file .env -p 3000:3000 waiterserver",
+    "dev_docker_stop": "docker stop waiter_dev"
+  }
+}

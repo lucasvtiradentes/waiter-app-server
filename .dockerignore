@@ -1,0 +1,21 @@
+#DOCKER IGNORE FILES ACORDING TO: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+
+#FOLDERS ====================
+.git/
+node_modules/
+offline/
+
+# #FILES ======================
+.dockerignore
+.editorconfig
+# .env
+.env.example
+.gitignore
+Dockerfile
+LICENSE
+pnpm-workspace.yaml
+README.MD
+
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

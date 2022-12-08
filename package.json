@@ -1,0 +1,29 @@
+{
+  "name": "waiter-app-server",
+  "version": "0.0.1",
+  "description": "🍔 waiter server to manage orders in restaurants.",
+  "license": "MIT",
+  "author": {
+    "name": "Lucas Vieira",
+    "email": "lucasvtiradentes@gmail.com"
+  },
+  "homepage": "https://github.com/lucasvtiradentes/waiter-app-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasvtiradentes/waiter-app-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasvtiradentes/waiter-app-server/issues"
+  },
+  "scripts": {
+    "prod_start": "cd ./build && npm run start",
+    "prod_build": "bash \"./scripts/prod_build.sh\"",
+    "start": "npm run prod_start",
+    "build": "npm run prod_build",
+    "dev": "pnpm run --parallel -r dev",
+    "dev_build": "pnpm run --parallel -r build",
+    "dev_docker_build": "docker build -t waiterserver .",
+    "dev_docker_start": "docker run --name waiter_dev --env-file .env -p 3000:3000 waiterserver",
+    "dev_docker_stop": "docker stop waiter_dev"
+  }
+}
